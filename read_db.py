@@ -1,6 +1,7 @@
 import sqlite3
- 
-db_file = 'bingo.db'
+import sys
+
+db_file = sys.argv[1]
  
 with sqlite3.connect(db_file) as conn:
     cursor = conn.cursor()

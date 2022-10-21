@@ -1,10 +1,11 @@
 import os
 import sqlite3
+import sys
+
+db_file = sys.argv[1]
 
 def check_db(filename):
     return os.path.exists(filename)
-
-db_file = 'bingo.db'
 
 if check_db(db_file):
     print('Database already exists. Exiting...')
