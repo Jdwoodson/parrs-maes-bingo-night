@@ -18,7 +18,7 @@ def input_data():
         print('Created the connection!')
         conn.execute("""
                 insert into form_return(form_id, last_name, first_name, adults, children, cards, daubers, chicken, paid)
-                values(?,?,?,?,?,?,?,?)
+                values(?,?,?,?,?,?,?,?,?)
                 """, data)
         print('Inserted values into the table!')
         

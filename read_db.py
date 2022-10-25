@@ -9,7 +9,7 @@ with sqlite3.connect(db_file) as conn:
                    select * from form_return
                    """)
     for row in cursor.fetchall():
-        form_id, last_name, first_name, adults, children, cards, daubers, chicken = row
+        form_id, last_name, first_name, adults, children, cards, daubers, chicken, paid = row
         print("{} {}:\n"
               "------------ {}\n"
               "Adults:           {}\n"
@@ -17,4 +17,4 @@ with sqlite3.connect(db_file) as conn:
               "Num of Cards:     {}\n"
               "Num of Daubers:   {}\n"
               "Num of Chicken:   {}\n"
-              "Paid status:      {}\n\n".format(first_name, last_name, form_id, adults, children, cards, daubers, chicken))
+              "Paid status:      {}\n\n".format(first_name, last_name, form_id, adults, children, cards, daubers, chicken, paid))
