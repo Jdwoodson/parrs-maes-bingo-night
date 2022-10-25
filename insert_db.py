@@ -11,7 +11,7 @@ def input_data():
     children = int(input('Number of children: '))
     cards = int(input('Number of bingo cards: '))
     daubers = int(input('Number of daubers: '))
-    chicken = int(input('Number of sandwhiches: '))
+    chicken = int(input('Number of sandwiches: '))
     paid = str(input('Full Prepayment?: '))
     data = (form_id, last_name, first_name, adults, children, cards, daubers, chicken, paid)
     with sqlite3.connect(db_file) as conn:
