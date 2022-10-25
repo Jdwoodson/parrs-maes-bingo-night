@@ -14,12 +14,14 @@ if check_db(db_file):
 schema = '''
 CREATE TABLE IF NOT EXISTS form_return(
     form_id integer PRIMARY KEY,
-    full_name text,
+    last_name text,
+    first_name text,
     adults integer,
     children integer,
     cards integer,
     daubers integer,
-    chicken integer
+    chicken integer,
+    paid text
 );
 '''
 con = sqlite3.connect(db_file)
