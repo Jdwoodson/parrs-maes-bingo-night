@@ -26,7 +26,7 @@ def input_data():
                 daubers = ?,
                 chicken = ?,
                 paid = ?
-                WHERE form_id = ?)
+                WHERE form_id = ?
                 """, data)
         print('Updated values in the DB!')
         
