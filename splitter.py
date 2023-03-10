@@ -37,12 +37,11 @@ for rsvp in rsvp_dict:
     daubers = rsvp_dict[rsvp].get('daubers')
     chicken = rsvp_dict[rsvp].get('chicken')
     paid = rsvp_dict[rsvp].get('paid')
-    if rsvp_dict[rsvp].get('paid') == 'no':
+    if paid in ['no','No','n','N']:
         unpaid_rsvp.append({'last_name':last_name, "first_name":first_name, 'cards':cards, 'daubers':daubers})
-    if rsvp_dict[rsvp].get('paid') == 'yes':
+    if paid in ['yes','Yes','y','Y']:
         paid_rsvp.append({'last_name':last_name, "first_name":first_name, 'cards':cards, 'daubers':daubers, 'chicken':chicken})
-    if rsvp_dict[rsvp].get('paid') == 'yes':
-        if rsvp_dict[rsvp].get('chicken') > 0:
+        if chicken > 0:
             chicken_purchase.append({'last_name':last_name, "first_name":first_name, 'chicken':chicken})
 
 def getLastName(rsvp):
